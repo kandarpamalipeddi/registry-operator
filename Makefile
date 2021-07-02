@@ -105,11 +105,11 @@ generate: controller-gen
 
 # Build the docker image
 docker-build:
-	podman build . -t $HOST/openshift/registry-operator:next
+	podman build . -t $(HOST)/openshift/registry-operator:next
 
 # Push the docker image
 docker-push:
-	podman push $HOST/openshift/registry-operator:next --tls-verify=false
+	podman push $(HOST)/openshift/registry-operator:next --tls-verify=false
 
 # find or download controller-gen
 # download controller-gen if necessary
